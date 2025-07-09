@@ -809,3 +809,4 @@ def render_to_response_example(request):
     }
     return render_to_response('mi_template.html', context, request)
 
+
