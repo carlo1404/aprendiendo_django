@@ -23,6 +23,7 @@ _¡Tu guía definitiva para dominar Django!_ 🚀
 ## 📋 Tabla de Contenidos
 
 - [🎯 Requisitos Previos](#requisitos-previos)
+- [🔧 Entorno 410](#entorno-410)
 - [⚡ Instalación Rápida](#instalación-rápida)
 - [🛠️ Configuración del Proyecto](#configuración-del-proyecto)
 - [📱 Desarrollo](#desarrollo)
@@ -40,6 +41,117 @@ _¡Tu guía definitiva para dominar Django!_ 🚀
 - ✅ Editor de código (recomendado: VS Code, PyCharm)
 
 </details>
+
+## 🔧 Entorno 410
+
+### ¿Qué es el Entorno 410?
+
+El **Entorno 410** es un entorno virtual de Python específicamente configurado para este proyecto Django. Se encuentra ubicado en la carpeta `entorno_410/` y contiene todas las dependencias necesarias para ejecutar este proyecto de manera aislada.
+
+### 🗂️ Estructura del Entorno
+
+```plaintext
+entorno_410/
+├── 📂 Scripts/           # Scripts de activación
+│   ├── activate          # Activación (Linux/macOS)
+│   ├── activate.bat      # Activación (Windows)
+│   └── Activate.ps1      # Activación (PowerShell)
+├── 📂 Lib/              # Bibliotecas instaladas
+│   └── 📂 site-packages/ # Paquetes Python
+├── 📂 Include/           # Archivos de inclusión
+└── 📄 pyvenv.cfg         # Configuración del entorno
+```
+
+### 🚀 Cómo Activar el Entorno 410
+
+#### Windows (PowerShell/CMD)
+```powershell
+# PowerShell
+.\entorno_410\Scripts\Activate.ps1
+
+# CMD
+.\entorno_410\Scripts\activate.bat
+```
+
+#### Linux/macOS
+```bash
+source entorno_410/bin/activate
+```
+
+### 📦 Dependencias Instaladas
+
+El entorno 410 incluye las siguientes dependencias principales:
+
+- **Django 3.0.3** - Framework web principal
+- **asgiref 3.9.1** - Interfaz ASGI
+- **pytz 2025.2** - Soporte de zonas horarias
+- **sqlparse 0.5.3** - Parser SQL
+- **pip 24.2** - Gestor de paquetes
+
+### 🔍 Verificar Activación
+
+Cuando el entorno esté activado, verás `(entorno_410)` al inicio de tu línea de comandos:
+
+```bash
+(entorno_410) C:\Users\Acer\OneDrive\Desktop\Django_Prueba>
+```
+
+### ⚙️ Configuración del Proyecto
+
+Este proyecto Django está configurado con:
+
+- **Proyecto principal**: `mi_proyecto/`
+- **Aplicación**: `mi_proyecto/` (vistas y lógica)
+- **Archivo de configuración**: `mi_proyecto/settings.py`
+- **URLs principales**: `mi_proyecto/urls.py`
+
+### 🎯 Funcionalidades del Proyecto
+
+El proyecto incluye múltiples vistas de ejemplo que demuestran:
+
+- ✅ **Vistas básicas** - Saludos y cálculos
+- ✅ **Formularios HTML** - Registro, login, formularios
+- ✅ **Páginas con CSS** - Headers, mains, sections
+- ✅ **Templates Django** - Uso de loader, render
+- ✅ **Contenido multimedia** - Videos y contenido HTML
+
+### 🛠️ Comandos Útiles
+
+```bash
+# Activar entorno
+.\entorno_410\Scripts\Activate.ps1
+
+# Ejecutar servidor
+python manage.py runserver
+
+# Crear migraciones
+python manage.py makemigrations
+
+# Aplicar migraciones
+python manage.py migrate
+
+# Crear superusuario
+python manage.py createsuperuser
+```
+
+### 🔧 Solución de Problemas
+
+#### Error de Activación en PowerShell
+Si tienes problemas con la política de ejecución en PowerShell:
+
+```powershell
+# Cambiar política de ejecución (como administrador)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+#### Verificar Instalación
+```bash
+# Verificar Django
+python -c "import django; print(django.get_version())"
+
+# Verificar entorno activo
+echo $env:VIRTUAL_ENV
+```
 
 ## ⚡ Instalación Rápida
 
