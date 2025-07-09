@@ -266,10 +266,206 @@ pip install -r requirements.txt
 
 ---
 
+## 🚀 Ejemplos de Uso
+
+### 📝 Vistas Disponibles
+
+El proyecto incluye múltiples ejemplos de vistas que puedes probar:
+
+```bash
+# Vistas básicas
+http://127.0.0.1:8000/saludo/
+http://127.0.0.1:8000/calcular_edad/2030/
+http://127.0.0.1:8000/suma_numeros/5/3/
+
+# Información personal
+http://127.0.0.1:8000/mi_informacion/
+http://127.0.0.1:8000/mi_nacionalidad/
+http://127.0.0.1:8000/edad/
+
+# Formularios y páginas HTML
+http://127.0.0.1:8000/formulario/
+http://127.0.0.1:8000/registro/
+http://127.0.0.1:8000/login/
+
+# Páginas con CSS
+http://127.0.0.1:8000/header/
+http://127.0.0.1:8000/main/
+http://127.0.0.1:8000/section/
+
+# Templates Django
+http://127.0.0.1:8000/loader_example/
+http://127.0.0.1:8000/render_example/
+```
+
+### 🎨 Personalización
+
+Puedes modificar las vistas en `mi_proyecto/views.py` para crear tus propias funcionalidades:
+
+```python
+def mi_nueva_vista(request):
+    return HttpResponse("¡Mi nueva vista personalizada!")
+```
+
+## 🔧 Troubleshooting Avanzado
+
+### ❌ Errores Comunes
+
+#### Error: "No module named 'django'"
+```bash
+# Solución: Activar el entorno virtual
+.\entorno_410\Scripts\Activate.ps1
+```
+
+#### Error: "Port already in use"
+```bash
+# Cambiar puerto
+python manage.py runserver 8001
+```
+
+#### Error: "TemplateDoesNotExist"
+```bash
+# Crear carpeta templates
+mkdir templates
+# Crear archivo template
+touch templates/mi_template.html
+```
+
+### 🔍 Debugging
+
+#### Verificar Configuración
+```bash
+# Verificar settings
+python manage.py check
+
+# Verificar URLs
+python manage.py show_urls
+```
+
+#### Logs de Django
+```python
+# En settings.py
+DEBUG = True
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}
+```
+
+## 📚 Recursos Adicionales
+
+### 🎓 Aprendizaje Continuo
+
+- **Django Documentation**: https://docs.djangoproject.com/
+- **Django REST Framework**: https://www.django-rest-framework.org/
+- **Django Channels**: https://channels.readthedocs.io/
+- **Django Debug Toolbar**: https://django-debug-toolbar.readthedocs.io/
+
+### 🛠️ Herramientas Recomendadas
+
+- **Django Extensions**: `pip install django-extensions`
+- **Django Debug Toolbar**: `pip install django-debug-toolbar`
+- **Django REST Framework**: `pip install djangorestframework`
+- **Django Crispy Forms**: `pip install django-crispy-forms`
+
+### 📖 Libros Recomendados
+
+- "Two Scoops of Django" - Daniel Greenfeld & Audrey Roy
+- "Django for Beginners" - William S. Vincent
+- "Django for APIs" - William S. Vincent
+
+## 🤝 Contribuir al Proyecto
+
+### 📋 Guías de Contribución
+
+1. **🍴 Fork del repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/Django_Prueba.git
+   cd Django_Prueba
+   ```
+
+2. **🔧 Configurar entorno de desarrollo**
+   ```bash
+   # Crear nuevo entorno virtual
+   python -m venv entorno_desarrollo
+   .\entorno_desarrollo\Scripts\Activate.ps1
+   
+   # Instalar dependencias
+   pip install -r requirements.txt
+   ```
+
+3. **🌿 Crear rama de feature**
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+
+4. **💻 Desarrollar cambios**
+   - Escribir código limpio y documentado
+   - Seguir las convenciones de Django
+   - Agregar tests si es necesario
+
+5. **✅ Commit y Push**
+   ```bash
+   git add .
+   git commit -m "feat: agregar nueva funcionalidad"
+   git push origin feature/nueva-funcionalidad
+   ```
+
+6. **📤 Crear Pull Request**
+   - Describir claramente los cambios
+   - Incluir screenshots si aplica
+   - Referenciar issues relacionados
+
+### 📝 Convenciones de Código
+
+- **Nombres de funciones**: `snake_case`
+- **Nombres de clases**: `PascalCase`
+- **Constantes**: `UPPER_CASE`
+- **Comentarios**: En español, claros y concisos
+
+### 🧪 Testing
+
+```bash
+# Ejecutar tests
+python manage.py test
+
+# Ejecutar tests con coverage
+pip install coverage
+coverage run --source='.' manage.py test
+coverage report
+```
+
+## 📞 Soporte
+
+### 🆘 Obtener Ayuda
+
+- **Issues de GitHub**: Reportar bugs y solicitar features
+- **Discussions**: Preguntas y discusiones generales
+- **Documentación**: Consultar la documentación oficial de Django
+
+### 📧 Contacto
+
+- **Email**: carlosandres@gmail.com
+- **GitHub**: https://github.com/carlo1404
+- **Blog**: https://carlosandres.com/blog
+
+---
+
 <div align="center">
 
 ### 🌟 ¡Feliz Desarrollo con Django! 🌟
 
 _Hecho con ❤️ para la comunidad de desarrolladores_
+
+**⭐ ¡No olvides dar una estrella al proyecto si te fue útil! ⭐**
 
 </div>
